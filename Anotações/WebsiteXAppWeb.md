@@ -42,4 +42,10 @@
    - O web browser só se comunica com o servidor web, este retorna com todos os arquivos necessários para rodar a aplicação web. 
 
 
-## Front-End
+## Camadas de uma aplicação web
+
+   - 1ª Camada: Web Server - Servidor que fornece a aplicação web para os usuários.
+
+   - 2ª Camada: Front-End - página do site que aparece para o usuário.
+
+   - 3ª Camada: Back-End - programação que não chega ao usuário, comumente conectado a um banco de dado. 
