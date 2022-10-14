@@ -83,3 +83,33 @@
        - CONNECT
        - OPTIONS
        - TRACE
+
+
+## Protocolo HTTPS (HyperText Tranfer Protocol Secure)
+
+   - Versão segura do HTTP. Encriptografa os dados que estão sendo transmitidos. 
+
+   - TLS (Transport Layer Security)
+
+   - Útil para proteger os dados durante a transmissão deles. HTTPS não protege contra XSS ou SQL injection. Além de esconder dados sensíveis para evitar pessoas que estão "farejando" a rede.
+
+
+## Enconding
+
+   - charset: conjunto de caracteres
+
+   ### URLs Enconding
+
+      - '#': separador de âncoras : %23 (código para utilizar em strings)
+
+      - '?' : separador de query strings : %3F (código para utilizar em strings)
+
+      - '&' : separador de elementos : %26 (código para utilizar em strings)
+
+      - '+' : indica um espaço : %2B (código para utilizar em strings)
+
+   - '&#60' equivale ao caracter '<' quando quiser utiliza-lo em um arquivo html.
+
+   - '&#62' equivale ao caracter '>' quando quiser utiliza-lo em um arquivo html.
+
+   - OBS: PARA QUE OS DOIS CARACTERES FUNCIONEM, É PRECISO UM ';' APÓS SEUS CÓDIGOS.
