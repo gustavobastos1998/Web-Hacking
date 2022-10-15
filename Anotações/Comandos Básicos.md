@@ -5,3 +5,4 @@
    - ifconfig : exibe informações sobre a máquina, como ip. 
    - netstat -nat : mostra as portas abertas e conexões ativas no pc. 
    - wget : faz requisição web, só que pelo terminal. Recebe os arquivos necessários para rodar a aplicação web (html, php).
+   - ssh -oHostKeyAlgorithms=+ssh-dss msfadmin@192.168.200.5
