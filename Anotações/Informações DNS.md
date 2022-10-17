@@ -1,8 +1,8 @@
 ## O que é um DNS (Domain Name Service)?
 
-    - O DNS faz a tradução da url para IPv4. Quando um computador faz um acesso ao Facebook, por exemplo, o servidor DNS se preocupa em transformar a url no ip do facebook. 
+   - O DNS faz a tradução da url para IPv4. Quando um computador faz um acesso ao Facebook, por exemplo, o servidor DNS se preocupa em transformar a url no ip do facebook. 
 
-    - Extremamente necessário, é mais fácil lembrar do nome do site do que o ip. 
+   - Extremamente necessário, é mais fácil lembrar do nome do site do que o ip. 
 
 
 ## Informações que o DNS pode oferecer
