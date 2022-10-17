@@ -27,3 +27,5 @@
    - A coleta de informações deve ser feita SEMPRE. É uma etapa muito importante e não deve ser menosprezada. Imprescindível para a criação do relatório. 
 
    - Importante colocar o resultado das informações em arquivos e armazená-los, para evitar ter que rodar o comando diversas veses. Como o nmap faz um scan nos serviços de uma aplicação web, é preciso internet para isso, podendo levar um bom tempo para terminar o comando.
+
+   - MUITO IMPORTANTE, COM AS INFORMAÇÕES COLETADAS PELAS FERRAMENTAS ESTUDADAS, APLICAR O NMAP, DIRB, OWASP ZAP, GOOGLE HACKING NAS NOVAS INFORMAÇÕES ENCONTRADAS DURANTE O PROCESSO DE COLETA DE INFORMAÇÕES. EXEMPLO: APLICAR NMAP EM DOMÍNIOS E SUBDOMÍNIOS ENCONTRADOS PELO DIRB E SUBLIST3R, RESPECTIVAMENTE.

@@ -4,7 +4,7 @@
 
    ### Estrutura do Cookie
 
-      - *DOMAIN* : website só pode enviar as informaç~es de cookie para seu próprio domínio.
+      - *DOMAIN* : website só pode enviar as informações de cookie para seu próprio domínio.
       - *EXPIRES* : define uma limitação de tempo para aquele cookie.
       - *PATH* : define quais urls daquele domínio é necessário enviar o cookie.
       - *CONTENT* : contêm diversos valores, no formato 'NAME=VALUE'
