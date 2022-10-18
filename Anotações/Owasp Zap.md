@@ -7,3 +7,10 @@
    - Analisa toda a requisição e resposta web passo a passo, como se fosse um debug de requisições e respostas web. 
 
    - Usado também para fazer scan, brute force em sites. 
+
+
+## Manual Explore
+
+   - Uma opção muito boa para enxergar as requisições e respostas passo a passo. 
+
+   - Pode habilitar HUD no navegador. 
