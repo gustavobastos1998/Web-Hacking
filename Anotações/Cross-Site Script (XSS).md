@@ -1,6 +1,6 @@
 ## O que é?
 
-   - Injeção de código HTML em uma aplicação.
+   - Injeção de código HTML em uma aplicação. Usando, na maioria dos casos, a tag script.
 
 
 ## Onde as falhsa ocorrem?
@@ -17,7 +17,7 @@
    - Basicamente tem acesso a todas as funcionalidades que um script tem, ou seja, controle total do navegador. Com isso, o atacante pode roubar cookies de acesso, sessão de usuário/admin, utilização de keyloggers, explorar falhas em outros plugins.
 
 
-## Utilizando o XSS
+## Utilizando o XSS Refletido
 
    - Algumas formas de aproveitar essa vulnerabilidade
 
@@ -32,8 +32,21 @@
       - Para melhorar ainda mais o ataque, é possível encurtar a url com um encurtador de url na internet para que fique menos evidente que o script malicioso será executado. 
 
 
+## Utilizando o XSS Permanente (stored)
+
+   - Esse tipo de cross-site script é mais perigoso que o refletido, pois não depende do cliente acessar um link que o atacante criou. No XSS Stored, o script malicioso fica armazenado na base de dados do servidor, portanto, quando qualquer usuário acessar determinada url de um site o javascript será executado.
+
+   - Essa vulnerabilidade pode acontecer em campos de comentários em postagens de sites. As falhas serão exploradas nos campos de nome e comentário.  
+
+   - Uma forma bem prática de testar essa vulnerabilidade é com a utilização do OWASP ZAP e arquivos de payload, contendo diversas formas de escrever a tag script buscando alguma brecha de segurança. 
+
+
 ## Observações
 
    - Importante checar a source page, para analisar o html, como ele é descrito. 
 
    - payload xss: existe na internet diversas formas diferente de tentar burlar a segurança do site com xss. Esse payload tem escritas diferentes de tags script que testam essa vulnerabilidade. 
+
+   - Alguns sites limitam a quantidade de caracteres de um comentário, limitando as possibilidades de criar scripts um pouco maiores. Porém, como a página é html, podemos mudar a quantidade de caracteres aceito inspecionando a página. Se o site for seguro, ele limitará a quantidade de caracteres enviados para o servidor e quebrará a tag script criada pelo atacante.
+
+   - https://portswigger.net/web-security/cross-site-scripting/cheat-sheet. Site ótimo para buscar diversos scripts para serem testados em sites com XSS.
