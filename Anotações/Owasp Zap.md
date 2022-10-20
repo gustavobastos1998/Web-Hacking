@@ -14,3 +14,5 @@
    - Uma opção muito boa para enxergar as requisições e respostas passo a passo. 
 
    - Pode habilitar HUD no navegador. 
+
+   - Ferramenta importante quando desejar explorar XSS em uma página. Teste de Fuzz é uma das funcionalidades do ZAP, útil para testar payloads de em páginas com método HTTP POST, testando todas as linhas do payload com o verbo POST.

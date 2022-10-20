@@ -41,6 +41,38 @@
    - Uma forma bem prática de testar essa vulnerabilidade é com a utilização do OWASP ZAP e arquivos de payload, contendo diversas formas de escrever a tag script buscando alguma brecha de segurança. 
 
 
+## Utilizando o XSS DOM (Document Object Model)
+
+   - Esse XSS mexe na documentação da página html. O DOM não javascript, mas pode ser manipulado pelo js.
+
+   - Caso uma página web manipule o DOM, é possível mudar como o js o manipula. 
+
+   - Os parâmetros são passados pela URL e caso o site tenha essa vulnerabilidade o script terá acesso privilegiado a partir de certas funções de javascript. 
+
+   - eval() é uma função de propriedades de um objeto global, exemplo de função onde pode ser explorado o XSS DOM. 
+
+   - document.write(), document.cookie são exemplos de comandos que manipulam o DOM. 
+
+   - Assim como o XSS reflected, o link malicioso deve ser clicado pelo alvo.
+
+
+## Como encontrar falhas XSS
+
+   - Três etapas:
+      - Localizar entrada de dados - campos para digitar nome, comentário, qualquer coisa que se comunica com o servidor através de GET/POST do protocolo HTTP. 
+      - Entender retorno ao usuário - observar o source da página, identificar como o site lida com as tentativas de XSS.
+      - Utilizar payloads - payloads para testar várias formas de escrever um XSS em campos possivelmente vulnerável.
+
+
+## Como mitigar o ataque XSS
+
+   - https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
+
+   - site ótimo que descreve em detalhes como se previnir do XSS. 
+
+   - Importante para hacker ético entender como preveni essa vulnerabilidade para saber como os sites seguros se protegem contra XSS.
+
+
 ## Observações
 
    - Importante checar a source page, para analisar o html, como ele é descrito. 
