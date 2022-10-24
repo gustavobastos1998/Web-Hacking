@@ -7,7 +7,7 @@
 
 ## Comandos sql
 
-   - OR é muito utilizado por pentesters para buscar informações em banco de dados. Juntamente com '1' = '1', pois a query, independente de condições retornara as colunas selecionadas por que 1 é igual a 1. Exemplo: select * from table where username = "jorge" or '1' = '1';. Ou caso for num campo de busca ou de login: " UNION select...; " OR '1'='1';.
+   - OR é muito utilizado por pentesters para buscar informações em banco de dados. Juntamente com '1' = '1', pois a query, independente de condições retornara as colunas selecionadas por que 1 é igual a 1. Exemplo: select * from table where username = "jorge" or '1' = '1'; 1' or 'A' = 'A. Ou caso for num campo de busca ou de login: " UNION select...; " OR '1'='1';.
 
    - UNION, importante lembrar que o UNION exige que as duas pesquisas na query tenham a mesma quantidade de colunas. 
 
@@ -28,3 +28,30 @@
    - Teste booleano: inserir dado e verificar se é verdadeiro ou falso. 
 
    - Temos como objetivo entender a base de dados como um todo, que informações ela armazena, nome de colunas, tabelas. 
+
+
+## SQL In-Band
+
+   - Também conhecido como UNION-Based SQL. Utilização do UNION nas sql querys. 
+
+   - O UNION é utilizado para fazer uma segunda query com a mesma quantidade de colunas que a primeira query. Pode ser utilizado para identificar o nome do banco de dados, de tabelas. 
+
+   - Basta fazer uma query chutando o nome da tabela, caso o site retorne o erro para o cliente ele pode informar muitas coisas. 
+
+   - Existe uma tabela comumente chamada de information_schema.columns que traz diversas informações importantes. Exemplo de utilização: 1' UNION SELECT table_name, column_name FROM information_schema.columns#, retorna o nome da tabela e o nome da coluna. 1' UNION SELECT @@Version, null pode informar a versão do banco de dados.
+
+
+## SQL Blind
+
+   - Vulnerabilidade mais comum no escopo de sql injection. 
+
+   - Mais difícil de explorar essa vulnerabilidade, pois não há muitas informações que são retornadas para o cliente.
+
+
+## Mitigando o SQL Injection
+
+   - https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
+
+   - site ótimo que descreve em detalhes como se previnir do SQL Injection. 
+
+   - Importante para hacker ético entender como preveni essa vulnerabilidade para saber como os sites seguros se protegem contra SQL Injection.
